@@ -15,11 +15,11 @@ function Footer() {
         y: 0,
         opacity: 1, // To
         duration: 1,
-        scrollTrigger: {
-          trigger: '.footer-content',
-          start: 'top bottom',
-          toggleActions: 'play none none reverse',
-        },
+        // scrollTrigger: {
+        //   trigger: '.footer-content',
+        //   start: 'top bottom',
+        //   toggleActions: 'play none none reverse',
+        // },
       }
     );
   }, []);
