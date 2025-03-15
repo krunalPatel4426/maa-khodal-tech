@@ -81,7 +81,7 @@ function About() {
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About MK Enterprise</h1>
             <p className="text-xl max-w-2xl">
-              Leading the way in precision engineering and CNC motor solutions since 2010.
+              Leading the way in precision engineering and CNC motor solutions.
               Our commitment to excellence drives innovation in industrial manufacturing.
             </p>
           </div>
@@ -94,7 +94,7 @@ function About() {
               <h2 className="text-3xl font-bold mb-8">Our Story</h2>
               <p className="text-gray-700 mb-6">
                 MK Enterprise is a leader in CNC motor solutions, delivering top-tier services
-                and parts since 2010. Our team specializes in precision engineering, combining
+                and parts. Our team specializes in precision engineering, combining
                 decades of expertise with cutting-edge technology to deliver exceptional results.
               </p>
               <p className="text-gray-700">

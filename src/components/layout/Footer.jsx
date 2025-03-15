@@ -48,7 +48,7 @@ function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <p className="text-sm mb-2">Email: info@mkenterprise.com</p>
-            <p className="text-sm mb-4">Phone: +1-555-123-4567</p>
+            <p className="text-sm mb-4">Phone: +91 9429409423</p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-secondary transition-colors"><FaTwitter size={20} /></a>
               <a href="#" className="hover:text-secondary transition-colors"><FaLinkedin size={20} /></a>

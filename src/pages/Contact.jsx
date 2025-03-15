@@ -77,7 +77,7 @@ function Contact() {
                     <FaPhone className="text-primary text-xl mt-1" />
                     <div>
                       <h3 className="text-lg font-semibold mb-2">Phone</h3>
-                      <p className="text-gray-600">+1-555-123-4567</p>
+                      <p className="text-gray-600">+91 9429409423</p>
                     </div>
                   </div>
 
@@ -94,9 +94,9 @@ function Contact() {
                     <div>
                       <h3 className="text-lg font-semibold mb-2">Address</h3>
                       <p className="text-gray-600">
-                        123 Industrial Park Drive<br />
-                        Manufacturing City, MC 12345<br />
-                        United States
+                        B/11 Jalaram Compelx Rameshwar Estate Road,<br />
+                        Near Virat Nagar Kenal Road<br />
+                        Ahmedabad
                       </p>
                     </div>
                   </div>
