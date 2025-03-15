@@ -1,5 +1,6 @@
+// ResetPassword.jsx
 import { useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom'; // Changed useSearchParams to useParams
 import { Helmet } from 'react-helmet-async';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -16,32 +17,44 @@ const resetPasswordSchema = Yup.object().shape({
     .required('Password is required'),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref('password'), null], 'Passwords must match')
-    .required('Confirm Password is required')
+    .required('Confirm Password is required'),
 });
 
 function ResetPassword() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const { token } = useParams(); // Get token from URL path (e.g., /reset-password/:token)
   const [error, setError] = useState('');
-
-  const token = searchParams.get('token');
 
   const formAnimation = useSpring({
     from: { opacity: 0, transform: 'translateY(50px)' },
     to: { opacity: 1, transform: 'translateY(0)' },
-    config: { tension: 280, friction: 20 }
+    config: { tension: 280, friction: 20 },
   });
 
   const handleSubmit = async (values, { setSubmitting }) => {
+    setError(''); // Clear previous errors
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // For demo purposes, simulate successful password reset
-      console.log('Password reset successful:', { token, newPassword: values.password });
-      navigate('/login', { replace: true });
+      const api = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${api}reset-password/${token}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          newPassword: values.password, // Send new password in body
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to reset password');
+      }
+
+      const data = await response.json();
+      console.log('Password reset successful:', data);
+      navigate('/login', { replace: true }); // Redirect to login on success
     } catch (err) {
-      setError('An error occurred while resetting your password');
+      setError(err.message || 'An error occurred while resetting your password');
     } finally {
       setSubmitting(false);
     }
@@ -81,7 +94,7 @@ function ResetPassword() {
           <Formik
             initialValues={{
               password: '',
-              confirmPassword: ''
+              confirmPassword: '',
             }}
             validationSchema={resetPasswordSchema}
             onSubmit={handleSubmit}

@@ -7,6 +7,11 @@ import { useSpring, animated } from '@react-spring/web';
 import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
 
 const signupSchema = Yup.object().shape({
+  username: Yup.string()
+    .min(3, 'Username must be at least 3 characters')
+    .max(20, 'Username must not exceed 20 characters')
+    .matches(/^[a-zA-Z0-9_]+$/, 'Username can only contain letters, numbers, and underscores')
+    .required('Username is required'),
   email: Yup.string()
     .email('Invalid email address')
     .required('Email is required'),
@@ -19,7 +24,7 @@ const signupSchema = Yup.object().shape({
     .required('Password is required'),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref('password'), null], 'Passwords must match')
-    .required('Confirm Password is required')
+    .required('Confirm Password is required'),
 });
 
 function Signup() {
@@ -29,19 +34,36 @@ function Signup() {
   const formAnimation = useSpring({
     from: { opacity: 0, transform: 'translateY(50px)' },
     to: { opacity: 1, transform: 'translateY(0)' },
-    config: { tension: 280, friction: 20 }
+    config: { tension: 280, friction: 20 },
   });
 
   const handleSubmit = async (values, { setSubmitting }) => {
+    setError(''); // Clear any previous errors
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // For demo purposes, simulate successful signup
-      console.log('Signup successful:', values);
-      navigate('/login');
+      const api = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${api}register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: values.username,
+          email: values.email,
+          password: values.password,
+        }),
+      });
+
+      const data = await response.json();
+      if(data.status === 409){
+        throw new Error("Username already in use.");
+      }
+      if(data.status === 410){
+        throw new Error("Email is already in use.")
+      }
+      // console.log('Signup successful:', data);
+      navigate('/verify-email'); // Redirect to login on success
     } catch (err) {
-      setError('An error occurred during signup');
+      setError(err.message || 'An error occurred during signup');
     } finally {
       setSubmitting(false);
     }
@@ -70,9 +92,10 @@ function Signup() {
 
           <Formik
             initialValues={{
+              username: '',
               email: '',
               password: '',
-              confirmPassword: ''
+              confirmPassword: '',
             }}
             validationSchema={signupSchema}
             onSubmit={handleSubmit}
@@ -86,6 +109,32 @@ function Signup() {
                 )}
 
                 <div className="space-y-4">
+                  {/* Username Field */}
+                  <div>
+                    <label htmlFor="username" className="sr-only">
+                      Username
+                    </label>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <FaUser className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <Field
+                        id="username"
+                        name="username"
+                        type="text"
+                        autoComplete="username"
+                        className="appearance-none rounded-lg relative block w-full pl-10 pr-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                        placeholder="Username"
+                      />
+                    </div>
+                    <ErrorMessage
+                      name="username"
+                      component="div"
+                      className="mt-1 text-sm text-red-500"
+                    />
+                  </div>
+
+                  {/* Email Field */}
                   <div>
                     <label htmlFor="email" className="sr-only">
                       Email address
@@ -110,6 +159,7 @@ function Signup() {
                     />
                   </div>
 
+                  {/* Password Field */}
                   <div>
                     <label htmlFor="password" className="sr-only">
                       Password
@@ -134,6 +184,7 @@ function Signup() {
                     />
                   </div>
 
+                  {/* Confirm Password Field */}
                   <div>
                     <label htmlFor="confirmPassword" className="sr-only">
                       Confirm Password

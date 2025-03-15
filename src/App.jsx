@@ -12,6 +12,8 @@ import Signup from './pages/auth/Signup';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import ResetPassword from './pages/auth/ResetPassword';
 import ProductList from './pages/ProductList';
+import VerifyEmail from './pages/auth/VerifyEmail';
+import ResetPasswordSent from './pages/auth/ResetPasswordSent';
 
 function App() {
   return (
@@ -30,7 +32,10 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
-              <Route path="/reset-password" element={<ResetPassword />} />
+              <Route path="/reset-password/:token" element={<ResetPassword />} />
+              <Route path="/verify-email" element={<VerifyEmail />} />
+              <Route path="/reset-password-sent" element={<ResetPasswordSent />} />
+
             </Routes>
           </main>
           <Footer />
