@@ -32,6 +32,7 @@ function Login() {
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({
           username: values.identifier, // Same value as identifier
           email: values.identifier,    // Same value as identifier
