@@ -29,7 +29,7 @@ function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="footer-content grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">MK Enterprise</h3>
+            <h3 className="text-xl font-bold mb-4">MK TECHNOLOGY</h3>
             <p className="text-sm">
               Leading provider of CNC motor parts and precision engineering solutions.
             </p>
@@ -47,7 +47,7 @@ function Footer() {
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <p className="text-sm mb-2">Email: info@mkenterprise.com</p>
+            <p className="text-sm mb-2">Email: info@mktechnology.com</p>
             <p className="text-sm mb-4">Phone: +91 9429409423</p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-secondary transition-colors"><FaTwitter size={20} /></a>
@@ -58,7 +58,7 @@ function Footer() {
         </div>
         
         <div className="border-t border-white/10 mt-8 pt-4 text-center">
-          <p className="text-sm">&copy; 2025 MK Enterprise. All rights reserved.</p>
+          <p className="text-sm">&copy; 2025 MK TECHNOLOGY. All rights reserved.</p>
         </div>
       </div>
     </footer>

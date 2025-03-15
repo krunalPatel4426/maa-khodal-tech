@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-primary-dark {
+  background-color: #1a2a44; /* Adjust based on your primary color */
+}
+
+/* Ensure images don’t exceed container */
+.product-item img {
+  max-height: 12rem; /* 192px max height */
+  width: 100%;
+  object-fit: contain; /* Ensures full visibility */
+}
+
+/* Optional: Center images */
+.product-item .aspect-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* Light gray background for empty space */
+}
+
 @layer base {
   body {
     @apply bg-white text-gray-900;

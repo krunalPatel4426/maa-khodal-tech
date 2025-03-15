@@ -1,0 +1,199 @@
+{
+    "categories": [
+      {
+        "category": "Cutting Tools",
+        "products": [
+          {
+            "name": "Ball Nose Tools",
+            "description": "End mills with a rounded tip for contouring and 3D machining.",
+            "img": "/img/Ball Nose Tools.jfif"
+          },
+          {
+            "name": "Vacuum Brazed Diamond Tools",
+            "description": "Diamond-coated tools for cutting and grinding hard materials like stone or metal.",
+            "img": "/img/Vacuum Brazed Diamond Tools.jfif"
+          },
+          {
+            "name": "Granite Endmill",
+            "description": "A durable end mill designed for cutting granite and other hard stones.",
+            "img": "/img/Granite Endmill.jfif"
+          },
+          {
+            "name": "1 Flute ACP Tools",
+            "description": "Single-flute tools optimized for cutting aluminum composite panels (ACP).",
+            "img": "/img/1 Flute ACP Tools.jfif"
+          },
+          {
+            "name": "Diamond Tools",
+            "description": "General-purpose diamond-coated tools for cutting and shaping tough materials.",
+            "img": "/img/Diamond Tools.png"
+          },
+          {
+            "name": "Endmill",
+            "description": "A versatile milling cutter for shaping metal and other materials.",
+            "img": "/img/Endmill.jfif"
+          }
+        ]
+      },
+      {
+        "category": "Motors & Drives",
+        "products": [
+          {
+            "name": "Servo Spindle Motor (3.5 to 7.5 kW)",
+            "description": "High-performance servo motor for CNC spindle applications, ranging from 3.5 to 7.5 kW.",
+            "img": "/img/Servo Spindle Motor (3.5 to 7.5 kW).jfif"
+          },
+          {
+            "name": "Stepper Motor",
+            "description": "A brushless motor for precise positioning in CNC and automation systems.",
+            "img": "/img/Stepper Motor.jfif"
+          },
+          {
+            "name": "Yako Drive and Motor",
+            "description": "A matched motor and drive system for reliable CNC motion control.",
+            "img": "/img/Yako Drive and Motor.jfif"
+          },
+          {
+            "name": "Leadshine Drive",
+            "description": "A high-performance drive for stepper or servo motors in CNC setups.",
+            "img": "/img/Leadshine Drive.jfif"
+          },
+          {
+            "name": "Yaskawa Drive",
+            "description": "An industrial-grade drive for precise motor control in automation systems.",
+            "img": "/img/Yaskawa Drive.jfif"
+          }
+        ]
+      },
+      {
+        "category": "Spindle Components",
+        "products": [
+          {
+            "name": "Air Cooled Spindle Flange",
+            "description": "A flange for mounting and stabilizing air-cooled spindles in CNC machines.",
+            "img": "/img/Air Cooled Spindle Flange.jfif"
+          },
+          {
+            "name": "Water Cooled Spindle (0.8 kW to 7.5 kW)",
+            "description": "A water-cooled spindle for CNC machining, available in 0.8 kW to 7.5 kW power options.",
+            "img": "/img/Water Cooled Spindle (0.8 kW to 7.5 kW).jfif"
+          },
+          {
+            "name": "Spindle Connector",
+            "description": "A connector for linking spindles to power or control systems.",
+            "img": "/img/Spindle Connector.jfif"
+          },
+          {
+            "name": "Spindle Clamp",
+            "description": "A clamp to securely hold spindles in place during operation.",
+            "img": "/img/Spindle Clamp.jfif"
+          },
+          {
+            "name": "Spindle Bearings",
+            "description": "High-precision bearings for smooth spindle rotation in CNC machines.",
+            "img": "/img/Spindle Bearings.jfif"
+          }
+        ]
+      },
+      {
+        "category": "Controllers & Electronics",
+        "products": [
+          {
+            "name": "Chiller Cooling Controller",
+            "description": "A controller for managing chiller systems to cool CNC spindles or tools.",
+            "img": "/img/Chiller Cooling Controller.jfif"
+          },
+          {
+            "name": "NK105 G2 and G3 Controller Set",
+            "description": "A control system for CNC machines, available in G2 and G3 variants.",
+            "img": "/img/NK105 G2 and G3 Controller Set.jfif"
+          },
+          {
+            "name": "Rich Auto Controller Set",
+            "description": "An advanced controller set for automated CNC operations.",
+            "img": "/img/Rich Auto Controller Set.jfif"
+          },
+          {
+            "name": "INVT VFD Drive",
+            "description": "A variable frequency drive for controlling spindle motor speed.",
+            "img": "/img/INVT VFD Drive.jfif"
+          },
+          {
+            "name": "Panel Switch",
+            "description": "A switch for controlling CNC machine panels or circuits.",
+            "img": "/img/Panel Switch.jfif"
+          }
+        ]
+      },
+      {
+        "category": "Mechanical Parts",
+        "products": [
+          {
+            "name": "Gearbox",
+            "description": "A mechanical device for transmitting power and adjusting torque in CNC systems.",
+            "img": "/img/Gearbox.jfif"
+          },
+          {
+            "name": "Rack and Pinion",
+            "description": "A gear system for linear motion in CNC machines.",
+            "img": "/img/Rack and Pinion.jfif"
+          },
+          {
+            "name": "Extension Shaft Collet",
+            "description": "A collet for extending tool shafts in CNC setups.",
+            "img": "/img/Extension Shaft Collet.jfif"
+          },
+          {
+            "name": "Drag Chain",
+            "description": "A flexible chain for protecting and organizing cables in moving CNC parts.",
+            "img": "/img/Drag Chain.jfif"
+          },
+          {
+            "name": "Timing Belt",
+            "description": "A belt for synchronizing motion between pulleys in CNC machines.",
+            "img": "/img/Timing Belt.jfif"
+          }
+        ]
+      },
+      {
+        "category": "Cooling & Pumps",
+        "products": [
+          {
+            "name": "Chiller Pump",
+            "description": "A pump for circulating coolant in chiller systems.",
+            "img": "/img/Chiller Pump.jfif"
+          },
+          {
+            "name": "Automatic Oil Pump",
+            "description": "An automated pump for lubricating CNC machine components.",
+            "img": "/img/Automatic Oil Pump.jfif"
+          },
+          {
+            "name": "Cooling Fan",
+            "description": "A fan for dissipating heat from CNC electronics or spindles.",
+            "img": "/img/Cooling Fan.jfif"
+          }
+        ]
+      },
+      {
+        "category": "Accessories & Tools",
+        "products": [
+          {
+            "name": "Customize Bellow Cover",
+            "description": "A custom protective cover for CNC machine components.",
+            "img": "/img/Customize Bellow Cover.jfif"
+          },
+          {
+            "name": "Servo Stabilizer (3 kVA to 25 kVA)",
+            "description": "A voltage stabilizer for servo systems, ranging from 3 to 25 kVA.",
+            "img": "/img/Servo Stabilizer (3 kVA to 25 kVA).jfif"
+          },
+          {
+            "name": "ER Spanner (20 to 40)",
+            "description": "A spanner for tightening or loosening ER collets (20 to 40 mm range).",
+            "img": "/img/ER Spanner (20 to 40).jfif"
+          }
+        ]
+      }
+    ]
+  }

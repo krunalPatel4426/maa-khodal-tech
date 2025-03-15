@@ -71,7 +71,7 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About Us - MK Enterprise</title>
+        <title>About Us - MK TECHNOLOGY</title>
         <meta name="description" content="Learn about MK Enterprise's journey in precision engineering and CNC motor solutions since 2010." />
       </Helmet>
 
@@ -79,7 +79,7 @@ function About() {
         {/* Hero Section */}
         <section className="about-header bg-primary text-white py-20">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About MK Enterprise</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About MK Technology</h1>
             <p className="text-xl max-w-2xl">
               Leading the way in precision engineering and CNC motor solutions.
               Our commitment to excellence drives innovation in industrial manufacturing.
@@ -93,7 +93,7 @@ function About() {
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold mb-8">Our Story</h2>
               <p className="text-gray-700 mb-6">
-                MK Enterprise is a leader in CNC motor solutions, delivering top-tier services
+                MK Technology is a leader in CNC motor solutions, delivering top-tier services
                 and parts. Our team specializes in precision engineering, combining
                 decades of expertise with cutting-edge technology to deliver exceptional results.
               </p>
