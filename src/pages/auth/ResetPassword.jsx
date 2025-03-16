@@ -46,12 +46,15 @@ function ResetPassword() {
         }),
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to reset password');
-      }
+      // if (!response.ok) {
+      //   const errorData = await response.json();
+      //   throw new Error(errorData.message || 'Failed to reset password');
+      // }
 
       const data = await response.json();
+      if(data.statusCode === 404){
+        throw new Error("Email not found.");
+      }
       console.log('Password reset successful:', data);
       navigate('/login', { replace: true }); // Redirect to login on success
     } catch (err) {
