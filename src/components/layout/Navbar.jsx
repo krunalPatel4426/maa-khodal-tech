@@ -47,12 +47,18 @@ function Navbar() {
     <nav className="bg-primary text-white sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold">
-            MK TECHNOLOGY
-          </Link>
+          {/* Brand and Slogan */}
+          <div className="flex flex-col">
+            <Link to="/" className="text-2xl font-bold">
+              MK TECHNOLOGY
+            </Link>
+            <span className="text-sm font-light text-gray-200 hidden md:block">
+              Your Spindle, Our Responsibility
+            </span>
+          </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-6 items-center">
             <Link to="/" className="hover:text-secondary transition-colors">
               Home
             </Link>
@@ -121,6 +127,10 @@ function Navbar() {
                 Login
               </Link>
             )}
+            {/* Slogan in Mobile Menu */}
+            <span className="text-sm font-light text-gray-200">
+              Your Spindle, Our Responsibility
+            </span>
           </div>
         </animated.div>
       </div>

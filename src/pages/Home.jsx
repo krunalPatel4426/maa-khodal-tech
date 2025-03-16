@@ -89,7 +89,7 @@ function Home() {
               },
               {
                 title: 'Custom Solutions',
-                image: 'https://images.unsplash.com/photo-1581092162384-8987c1d64926?auto=format&fit=crop&q=80',
+                image: '/img2/router1.jpeg',
                 description: 'Tailored engineering solutions for your specific needs'
               }
             ].map((product, index) => (

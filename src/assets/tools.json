@@ -44,24 +44,19 @@
             "img": "/img/Servo Spindle Motor (3.5 to 7.5 kW).jfif"
           },
           {
+            "name": "Aeromotion Motor Drive",
+            "description": "The Aeromotion motor drive is a compact, high-performance system designed to power adjustable",
+            "img":"/img2/Aeromotion motor drive.jfif"
+          },
+          {
             "name": "Stepper Motor",
             "description": "A brushless motor for precise positioning in CNC and automation systems.",
             "img": "/img/Stepper Motor.jfif"
           },
           {
-            "name": "Yako Drive and Motor",
-            "description": "A matched motor and drive system for reliable CNC motion control.",
-            "img": "/img/Yako Drive and Motor.jfif"
-          },
-          {
             "name": "Leadshine Drive",
             "description": "A high-performance drive for stepper or servo motors in CNC setups.",
             "img": "/img/Leadshine Drive.jfif"
-          },
-          {
-            "name": "Yaskawa Drive",
-            "description": "An industrial-grade drive for precise motor control in automation systems.",
-            "img": "/img/Yaskawa Drive.jfif"
           }
         ]
       },
@@ -69,19 +64,24 @@
         "category": "Spindle Components",
         "products": [
           {
-            "name": "Air Cooled Spindle Flange",
+            "name": "ACT Spindle (1.8 kW to 20 kW)",
+            "description": "The ACT Spindle is a high-precision, adjustable component designed for advanced CNC machining and industrial applications, ensuring reliable performance and durability.",
+            "img": "/img2/ACT Splindle.jfif"
+          },
+          {
+            "name": "Air Cooled Spindle Flange (0.8 kW to 16 kW)",
             "description": "A flange for mounting and stabilizing air-cooled spindles in CNC machines.",
             "img": "/img/Air Cooled Spindle Flange.jfif"
           },
           {
-            "name": "Water Cooled Spindle (0.8 kW to 7.5 kW)",
+            "name": "Water Cooled Spindle (1.2 kW to 20 kW)",
             "description": "A water-cooled spindle for CNC machining, available in 0.8 kW to 7.5 kW power options.",
-            "img": "/img/Water Cooled Spindle (0.8 kW to 7.5 kW).jfif"
+            "img": "/img2/water cool splindle.jfif"
           },
           {
             "name": "Spindle Connector",
             "description": "A connector for linking spindles to power or control systems.",
-            "img": "/img/Spindle Connector.jfif"
+            "img": "/img2/Spindle Connector.jfif"
           },
           {
             "name": "Spindle Clamp",
@@ -89,7 +89,7 @@
             "img": "/img/Spindle Clamp.jfif"
           },
           {
-            "name": "Spindle Bearings",
+            "name": "Spindle Bearings (HXB)",
             "description": "High-precision bearings for smooth spindle rotation in CNC machines.",
             "img": "/img/Spindle Bearings.jfif"
           }
@@ -114,9 +114,9 @@
             "img": "/img/Rich Auto Controller Set.jfif"
           },
           {
-            "name": "INVT VFD Drive",
+            "name": "Aeromotion VFD Drive",
             "description": "A variable frequency drive for controlling spindle motor speed.",
-            "img": "/img/INVT VFD Drive.jfif"
+            "img": "/img2/Aeromotion VFD Drive.jfif"
           },
           {
             "name": "Panel Switch",

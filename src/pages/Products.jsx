@@ -45,7 +45,7 @@ function Products() {
     {
       title: 'Custom Solutions',
       description: 'Tailored engineering solutions for specific industrial applications',
-      image: 'https://images.unsplash.com/photo-1581092162384-8987c1d64926?auto=format&fit=crop&q=80',
+      image: '/img2/router2.jpeg',
       items: ['Custom Motors', 'Specialized Components', 'Integration Systems'],
       link: 'Spindle Components'
     },

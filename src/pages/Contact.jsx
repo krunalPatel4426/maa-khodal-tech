@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import gsap from 'gsap';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const contactSchema = Yup.object().shape({
   name: Yup.string()
@@ -23,30 +24,66 @@ const contactSchema = Yup.object().shape({
 });
 
 function Contact() {
+  const navigate = useNavigate();
+  const [error, setError] = useState(''); // For API errors
+  const [message, setMessage] = useState(''); // For success/error messages
+
   useEffect(() => {
     gsap.from('.contact-info', {
       x: -50,
       opacity: 1,
       duration: 0.8,
-      stagger: 0.2
+      stagger: 0.2,
     });
 
     gsap.from('.contact-form', {
       y: 50,
       opacity: 1,
       duration: 0.8,
-      delay: 0.3
+      delay: 0.3,
     });
   }, []);
 
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values);
+  // Check if user is logged in and get email
+  const user = localStorage.getItem('user');
+  const userData = user ? JSON.parse(user) : null;
+  const loggedInEmail = userData?.user?.email || '';
+
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    if (!user) {
+      navigate('/login'); // Redirect to login if not logged in
+      return;
+    }
+
+    setError(''); // Clear previous errors
+    setMessage(''); // Clear previous messages
+
+    try {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${apiUrl}get-quote`, { // Fixed endpoint URL
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: loggedInEmail, // Always use logged-in email
+          phone: values.phone,
+          message: values.message,
+        }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to submit quote request');
+      }
+      resetForm({ values: { name: '', email: loggedInEmail, phone: '', message: '' } }); // Reset but keep email
+      setMessage('Thank you for your message. We will contact you soon!');
+    } catch (err) {
+      setError(err.message || 'An error occurred while submitting your request');
+    } finally {
       setSubmitting(false);
-      resetForm();
-      alert('Thank you for your message. We will contact you soon!');
-    }, 1000);
+    }
   };
 
   return (
@@ -107,12 +144,22 @@ function Contact() {
               <div className="lg:col-span-2">
                 <div className="contact-form bg-white rounded-lg shadow-lg p-8">
                   <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+                  {error && (
+                    <div className="bg-red-50 text-red-500 p-3 rounded-md text-sm mb-6">
+                      {error}
+                    </div>
+                  )}
+                  {message && (
+                    <div className="bg-green-50 text-green-500 p-3 rounded-md text-sm mb-6">
+                      {message}
+                    </div>
+                  )}
                   <Formik
                     initialValues={{
                       name: '',
-                      email: '',
+                      email: loggedInEmail, // Pre-fill with logged-in email or empty
                       phone: '',
-                      message: ''
+                      message: '',
                     }}
                     validationSchema={contactSchema}
                     onSubmit={handleSubmit}
@@ -139,6 +186,8 @@ function Contact() {
                             type="email"
                             name="email"
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
+                            readOnly={!!loggedInEmail} // Read-only if logged in
+                            disabled={!!loggedInEmail} // Disabled if logged in
                           />
                           <ErrorMessage name="email" component="div" className="text-red-500 text-sm mt-1" />
                         </div>
@@ -152,6 +201,9 @@ function Contact() {
                             name="phone"
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
                           />
+                          <p className="text-sm text-gray-500 mt-1">
+                            Please enter the correct number; we will contact you through phone mostly.
+                          </p>
                           <ErrorMessage name="phone" component="div" className="text-red-500 text-sm mt-1" />
                         </div>
 
