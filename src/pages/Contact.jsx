@@ -241,7 +241,7 @@ function Contact() {
           <div className="container mx-auto px-4">
             <div className="h-96 bg-gray-200 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596698663!2d-74.25987368715491!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1645564756216!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3671.8398569810342!2d72.64583067531404!3d23.029651479168844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDAxJzQ2LjgiTiA3MsKwMzgnNTQuMyJF!5e0!3m2!1sen!2sin!4v1742116552975!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
