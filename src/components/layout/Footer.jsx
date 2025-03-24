@@ -52,7 +52,7 @@ function Footer() {
             <div className="flex space-x-4">
               <a href="#" className="hover:text-secondary transition-colors"><FaTwitter size={20} /></a>
               {/* <a href="#" className="hover:text-secondary transition-colors"><FaLinkedin size={20} /></a> */}
-              <a href="https://www.instagram.com/ayushdobariya8?igsh=dG5sb2NqZTl1OTZo" className="hover:text-secondary transition-colors"><FaInstagram size={20} /></a>
+              <a href="https://www.instagram.com/maakhodaltechnology?igsh=MThiejF2c3E2aWZwOQ==" className="hover:text-secondary transition-colors"><FaInstagram size={20} /></a>
             </div>
           </div>
         </div>
