@@ -47,12 +47,17 @@ function Navbar() {
     <nav className="bg-primary text-white sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Brand and Slogan */}
-          <div className="flex flex-col">
-            <Link to="/" className="text-2xl font-bold">
-              MK TECHNOLOGY
+          {/* Brand, Logo, and Slogan */}
+          <div className="flex sm:items-center sm:space-x-2 flex-col sm:flex-row items-start">
+            <Link to="/" className="flex items-center space-x-2">
+              <img
+                src="/img2/Maa Khodal Technology.png"
+                alt="MK Technology Logo"
+                className="h-8 w-8 sm:h-8 sm:w-8 bg-white rounded-xl"
+              />
+              <span className="text-xl sm:text-2xl font-bold">MK TECHNOLOGY</span>
             </Link>
-            <span className="text-sm font-light text-gray-200 hidden md:block">
+            <span className="text-xs sm:text-sm font-light text-gray-200 md:text-left">
               Your Spindle, Our Responsibility
             </span>
           </div>

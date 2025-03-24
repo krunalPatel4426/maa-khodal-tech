@@ -115,6 +115,19 @@ function Home() {
         </div>
       </section>
 
+      {/* View Our Products Section */}
+      <section className="section-padding bg-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">View Our Products</h2>
+          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+            Discover our wide range of splindle components, Motor & Drives and many more, designed to meet the demands of modern precision engineering. From CNC components to specialized industrial solutions, we’ve got you covered.
+          </p>
+          <Link to="/product-list/Cutting Tools" className="btn-primary inline-block">
+            Shop Our Products
+          </Link>
+        </div>
+      </section>
+
       {/* Services Overview */}
       <section className="section-padding">
         <div className="container mx-auto px-4">
