@@ -24,7 +24,7 @@ function Home() {
 
     gsap.from('.feature-card', {
       y: 50,
-      opacity: 1,
+      opacity: 0,
       duration: 0.8,
       stagger: 0.2,
       scrollTrigger: {
